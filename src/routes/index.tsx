@@ -1,26 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import GallerySection from "@/components/GallerySection";
+import CountdownOffer from "@/components/CountdownOffer";
+import OrderForm from "@/components/OrderForm";
+import Footer from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: LandingPage,
+  head: () => ({
+    meta: [
+      { title: "Luxe Aura — سوار Royal Bracelet الفاخر | توصيل مجاني" },
+      { name: "description", content: "اكتشف سوار Royal Bracelet من Luxe Aura. جودة فاخرة مع علبة أنيقة وكيس هدايا — توصيل مجاني لكامل الجزائر" },
+      { property: "og:title", content: "Luxe Aura — سوار Royal Bracelet الفاخر" },
+      { property: "og:description", content: "هدية ملكية متكاملة — سوار فاخر + علبة أنيقة + توصيل مجاني 🇩🇿" },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function LandingPage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <HeroSection />
+      <FeaturesSection />
+      <GallerySection />
+      <CountdownOffer />
+      <OrderForm />
+      <Footer />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
