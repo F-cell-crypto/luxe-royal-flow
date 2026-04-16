@@ -34,6 +34,10 @@ export const Route = createRootRoute({
       { name: "author", content: "Luxe Aura" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Luxe Aura — سوار Royal Bracelet الفاخر" },
+      { name: "twitter:title", content: "Luxe Aura — سوار Royal Bracelet الفاخر" },
+      { property: "og:description", content: "اكتشف سوار Royal Bracelet من Luxe Aura. جودة فاخرة مع علبة أنيقة — توصيل مجاني لكامل الجزائر" },
+      { name: "twitter:description", content: "اكتشف سوار Royal Bracelet من Luxe Aura. جودة فاخرة مع علبة أنيقة — توصيل مجاني لكامل الجزائر" },
     ],
     links: [
       {
